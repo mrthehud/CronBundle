@@ -1,10 +1,10 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Entity;
+namespace TWP\Collaborapp\Utilities\CronBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="ColourStream\Bundle\CronBundle\Entity\CronJobRepository")
+ * @ORM\Entity(repositoryClass="TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobRepository")
  */
 class CronJob
 {
@@ -151,9 +151,9 @@ class CronJob
     /**
      * Add results
      *
-     * @param ColourStream\Bundle\CronBundle\Entity\CronJobResult $results
+     * @param TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult $results
      */
-    public function addCronJobResult(\ColourStream\Bundle\CronBundle\Entity\CronJobResult $results)
+    public function addCronJobResult(\TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult $results)
     {
         $this->results[] = $results;
     }
@@ -171,9 +171,9 @@ class CronJob
     /**
      * Set mostRecentRun
      *
-     * @param ColourStream\Bundle\CronBundle\Entity\CronJobResult $mostRecentRun
+     * @param TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult $mostRecentRun
      */
-    public function setMostRecentRun(\ColourStream\Bundle\CronBundle\Entity\CronJobResult $mostRecentRun)
+    public function setMostRecentRun(\TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult $mostRecentRun)
     {
         $this->mostRecentRun = $mostRecentRun;
     }
@@ -181,7 +181,7 @@ class CronJob
     /**
      * Get mostRecentRun
      *
-     * @return ColourStream\Bundle\CronBundle\Entity\CronJobResult 
+     * @return TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult 
      */
     public function getMostRecentRun()
     {

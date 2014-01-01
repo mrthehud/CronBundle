@@ -6,7 +6,7 @@
 
     <!--
     <parameters>
-        <parameter key="colour_stream_cron.example.class">ColourStream\Bundle\CronBundle\Example</parameter>
+        <parameter key="colour_stream_cron.example.class">TWP\Collaborapp\Utilities\CronBundle\Example</parameter>
     </parameters>
 
     <services>

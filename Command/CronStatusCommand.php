@@ -1,8 +1,8 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Command;
-use ColourStream\Bundle\CronBundle\Entity\CronJobResult;
+namespace TWP\Collaborapp\Utilities\CronBundle\Command;
+use TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult;
 
-use ColourStream\Bundle\CronBundle\Entity\CronJob;
+use TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -41,7 +41,7 @@ class CronStatusCommand extends ContainerAwareCommand
         }
         else
         {
-            $cronJobs = $em->getRepository('ColourStreamCronBundle:CronJob')->findAll();
+            $cronJobs = $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJob')->findAll();
         }
         
         foreach($cronJobs as $cronJob)

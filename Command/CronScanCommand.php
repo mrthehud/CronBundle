@@ -1,21 +1,14 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Command;
-use ColourStream\Bundle\CronBundle\Entity\CronJob;
+namespace TWP\Collaborapp\Utilities\CronBundle\Command;
+use TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob;
 
 use Doctrine\ORM\EntityManager;
-
 use Symfony\Component\Console\Command\Command;
-
-use ColourStream\Bundle\CronBundle\Annotation\CronJob as CronJobAnno;
-
+use TWP\Collaborapp\Utilities\CronBundle\Annotation\CronJob as CronJobAnno;
 use Symfony\Bundle\DoctrineBundle\Registry;
-
 use Symfony\Component\Console\Output\OutputInterface;
-
 use Symfony\Component\Console\Input\InputInterface;
-
 use Symfony\Component\Console\Input\InputOption;
-
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 
 class CronScanCommand extends ContainerAwareCommand
@@ -35,7 +28,7 @@ class CronScanCommand extends ContainerAwareCommand
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         
         // Enumerate the known jobs
-        $jobRepo = $em->getRepository('ColourStreamCronBundle:CronJob');
+        $jobRepo = $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJob');
         $knownJobs = $jobRepo->getKnownJobs();
         $knownJobs = array_fill_keys($knownJobs, true);
         

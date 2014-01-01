@@ -1,10 +1,10 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Entity;
+namespace TWP\Collaborapp\Utilities\CronBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="ColourStream\Bundle\CronBundle\Entity\CronJobResultRepository")
+ * @ORM\Entity(repositoryClass="TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResultRepository")
  */
 class CronJobResult
 {
@@ -148,9 +148,9 @@ class CronJobResult
     /**
      * Set job
      *
-     * @param ColourStream\Bundle\CronBundle\Entity\CronJob $job
+     * @param TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob $job
      */
-    public function setJob(\ColourStream\Bundle\CronBundle\Entity\CronJob $job)
+    public function setJob(\TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob $job)
     {
         $this->job = $job;
     }
@@ -158,7 +158,7 @@ class CronJobResult
     /**
      * Get job
      *
-     * @return ColourStream\Bundle\CronBundle\Entity\CronJob 
+     * @return TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob 
      */
     public function getJob()
     {

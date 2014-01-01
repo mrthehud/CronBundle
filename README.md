@@ -6,43 +6,6 @@ does not allow for command-line access (TODO).
 
 This bundle is tested only against Symfony 2.1. It will likely work with Symfony 2.0, but YMMV
 
-## Installation
-
-Installing this bundle can be done through these simple steps:
-
-1. Add the bundle to your project as a composer dependency:
-```javascript
-// composer.json
-{
-    // ...
-    require: {
-        // ...
-        "colourstream/cron-bundle": "dev-master"
-    }
-}
-```
-
-2. Update your composer installation:
-```shell
-composer update
-````
-
-3. Add the bundle to your application kernel:
-```php
-// application/ApplicationKernel.php
-public function registerBundles()
-{
-	// ...
-	$bundle = array(
-		// ...
-        new ColourStream\Bundle\CronBundle\ColourStreamCronBundle(),
-	);
-    // ...
-
-    return $bundles;
-}
-```
-
 4. Update your DB schema
 ```shell
 app/console doctrine:schema:update

@@ -1,5 +1,5 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Command;
+namespace TWP\Collaborapp\Utilities\CronBundle\Command;
 
 use Symfony\Component\Console\Output\Output;
 

@@ -1,5 +1,5 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Command;
+namespace TWP\Collaborapp\Utilities\CronBundle\Command;
 
 use Fusion\Framework\CronBundle\Entity\CronJobResult;
 
@@ -36,18 +36,18 @@ class CronPruneLogsCommand extends ContainerAwareCommand
         
         if($job)
         {
-            $jobObj = $em->getRepository('ColourStreamCronBundle:CronJob')->findOneByCommand($job);
+            $jobObj = $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJob')->findOneByCommand($job);
             if(!$jobObj)
             {
                 $output->writeln("Couldn't find a job by the name of " . $job);
                 return CronJobResult::FAILED;
             }
             
-            $em->getRepository('ColourStreamCronBundle:CronJobResult')->deleteOldLogs($jobObj);
+            $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJobResult')->deleteOldLogs($jobObj);
         }
         else
         {
-            $em->getRepository('ColourStreamCronBundle:CronJobResult')->deleteOldLogs();
+            $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJobResult')->deleteOldLogs();
         }
         
         // Flush the EM

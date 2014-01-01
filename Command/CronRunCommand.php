@@ -1,12 +1,12 @@
 <?php
-namespace ColourStream\Bundle\CronBundle\Command;
+namespace TWP\Collaborapp\Utilities\CronBundle\Command;
 use Doctrine\ORM\EntityManager;
 
 use Symfony\Component\Console\Input\ArgvInput;
 
-use ColourStream\Bundle\CronBundle\Entity\CronJobResult;
+use TWP\Collaborapp\Utilities\CronBundle\Entity\CronJobResult;
 
-use ColourStream\Bundle\CronBundle\Entity\CronJob;
+use TWP\Collaborapp\Utilities\CronBundle\Entity\CronJob;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -29,7 +29,7 @@ class CronRunCommand extends ContainerAwareCommand
     {
         $start = microtime(true);
         $em = $this->getContainer()->get("doctrine.orm.entity_manager");
-        $jobRepo = $em->getRepository('ColourStreamCronBundle:CronJob');
+        $jobRepo = $em->getRepository('TWPCollaborappUtilitiesCronBundle:CronJob');
         
         $jobsToRun = array();
         if($jobName = $input->getArgument('job'))

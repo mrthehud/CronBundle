@@ -1,6 +1,6 @@
 <?php
 
-namespace ColourStream\Bundle\CronBundle\DependencyInjection;
+namespace TWP\Collaborapp\Utilities\CronBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
